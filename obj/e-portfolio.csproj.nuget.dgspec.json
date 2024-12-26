@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/emir/projects/e-portfolio/e-portfolio.csproj": {}
+    "/home/emir/projects/e-portfolio-demo/e-portfolio.csproj": {}
   },
   "projects": {
-    "/home/emir/projects/e-portfolio/e-portfolio.csproj": {
+    "/home/emir/projects/e-portfolio-demo/e-portfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/emir/projects/e-portfolio/e-portfolio.csproj",
+        "projectUniqueName": "/home/emir/projects/e-portfolio-demo/e-portfolio.csproj",
         "projectName": "e-portfolio",
-        "projectPath": "/home/emir/projects/e-portfolio/e-portfolio.csproj",
+        "projectPath": "/home/emir/projects/e-portfolio-demo/e-portfolio.csproj",
         "packagesPath": "/home/emir/.nuget/packages/",
-        "outputPath": "/home/emir/projects/e-portfolio/obj/",
+        "outputPath": "/home/emir/projects/e-portfolio-demo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/emir/.nuget/NuGet/NuGet.Config"

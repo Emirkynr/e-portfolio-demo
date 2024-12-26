@@ -9,37 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = e_portfolio
 build_property.RootNamespace = e_portfolio
-build_property.ProjectDir = /home/emir/projects/e-portfolio/
+build_property.ProjectDir = /home/emir/projects/e-portfolio-demo/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/emir/projects/e-portfolio
+build_property.MSBuildProjectDirectory = /home/emir/projects/e-portfolio-demo
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/emir/projects/e-portfolio/Pages/Error.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/Education.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWR1Y2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/emir/projects/e-portfolio-demo/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/emir/projects/e-portfolio/Pages/Index.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/emir/projects/e-portfolio/Pages/Privacy.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/PersonalInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGVyc29uYWxJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/emir/projects/e-portfolio-demo/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/emir/projects/e-portfolio/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/Projects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvamVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/emir/projects/e-portfolio-demo/Pages/References.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVmZXJlbmNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/emir/projects/e-portfolio-demo/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/emir/projects/e-portfolio/Pages/_ViewImports.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/Skills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2tpbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/emir/projects/e-portfolio-demo/Pages/WorkExperience.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV29ya0V4cGVyaWVuY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/emir/projects/e-portfolio-demo/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/emir/projects/e-portfolio/Pages/_ViewStart.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/emir/projects/e-portfolio/Pages/Shared/_Layout.cshtml]
+[/home/emir/projects/e-portfolio-demo/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-awin7led87
