@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "e-portfolio/1.0.0": {
+        "runtime": {
+          "e-portfolio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "e-portfolio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
