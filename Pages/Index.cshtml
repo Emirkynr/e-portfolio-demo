@@ -1,12 +1,12 @@
 ﻿@page
-@model IndexModel
+@model e_portfolio.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Hosgeldiniz</h1>
+    <p>E-portfolyo site demoma hosgeldiniz. Lutfen Giris yapin.</p>
 </div>
 <ul>
     <li><a href="/PersonalInfo">Kişisel Bilgiler</a></li>
@@ -16,3 +16,11 @@
     <li><a href="/Skills">Yetenekler</a></li>
     <li><a href="/References">Referanslar</a></li>
 </ul>
+@if (Model.DisplayUser != null)
+{
+    <p><strong>Name:</strong> @Model.DisplayUser.FirstName @Model.DisplayUser.LastName</p>
+}
+else
+{
+    <p>Giris yapilmadi. Lutfen Giris yapiniz.</p>
+}
