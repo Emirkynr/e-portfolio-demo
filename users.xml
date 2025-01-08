@@ -9,6 +9,11 @@
   </User>
   <User>
     <ID>2</ID>
+    <Referans>
+      <ReferansAdi>\</ReferansAdi>
+      <ReferansTelNo>\</ReferansTelNo>
+      <ReferansEposta>\</ReferansEposta>
+    </Referans>
     <FirstName>Joe</FirstName>
     <LastName>Smith</LastName>
     <Email>jane.smith@example.com</Email>

@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/emir/projects/e-portfolio-demo
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/emir/projects/e-portfolio-demo/Pages/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/emir/projects/e-portfolio-demo/Pages/Education.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRWR1Y2F0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
