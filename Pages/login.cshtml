@@ -2,7 +2,7 @@
 @model e_portfolio.Pages.LoginModel
 
 <h1>Login</h1>
-<form method="post">
+<form method="post" asp-page-handler="Login">
     <div>
         <label for="Username">Username</label>
         <input type="text" id="Username" name="Username" asp-for="Username" />
@@ -14,7 +14,33 @@
     <button type="submit">Login</button>
 </form>
 
+<h1>Register</h1>
+<form method="post" asp-page-handler="Register">
+    <div>
+        <label for="RegisterName">First Name</label>
+        <input type="text" id="RegisterName" name="RegisterName" asp-for="RegisterName" />
+    </div>
+    <div>
+        <label for="RegisterSurname">Last Name</label>
+        <input type="text" id="RegisterSurname" name="RegisterSurname" asp-for="RegisterSurname" />
+    </div>
+    <div>
+        <label for="RegisterUsername">Username</label>
+        <input type="text" id="RegisterUsername" name="RegisterUsername" asp-for="RegisterUsername" />
+    </div>
+    <div>
+        <label for="RegisterPassword">Password</label>
+        <input type="password" id="RegisterPassword" name="RegisterPassword" asp-for="RegisterPassword" />
+    </div>
+    <button type="submit">Register</button>
+</form>
+
 @if (!string.IsNullOrEmpty(Model.ErrorMessage))
 {
     <p style="color:red;">@Model.ErrorMessage</p>
+}
+
+@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <p style="color:green;">@Model.SuccessMessage</p>
 }

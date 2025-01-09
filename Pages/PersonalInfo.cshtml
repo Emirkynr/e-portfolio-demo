@@ -7,14 +7,47 @@
 <h2>Kişisel Bilgiler</h2>
 @if (Model.DisplayUser != null)
 {
-    <p>Ad: @Model.DisplayUser.Name</p>
-    <p>Soyad: @Model.DisplayUser.Surname</p>
-    <p>Doğum Tarihi: 11/05/2004</p>
-    <p>Telefon: 501-1312930</p>
-    <p>Github: github.com/Emirkynr</p>
-    <p>Mail: @Model.DisplayUser.Email</p>
+    <form method="post">
+        <div>
+            <label for="Name">Ad:</label>
+            <input type="text" id="Name" name="Name" value="@Model.DisplayUser.Name" readonly />
+        </div>
+        <div>
+            <label for="Surname">Soyad:</label>
+            <input type="text" id="Surname" name="Surname" value="@Model.DisplayUser.Surname" readonly />
+        </div>
+        <div>
+            <label for="Email">Mail:</label>
+            <input type="email" id="Email" name="Email" value="@Model.DisplayUser.Email" readonly />
+        </div>
+        <div>
+            <label for="GitHub">GitHub:</label>
+            <input type="text" id="GitHub" name="GitHub" value="@Model.DisplayUser.GitHub" readonly />
+        </div>
+        <div>
+            <label for="LinkedIn">LinkedIn:</label>
+            <input type="text" id="LinkedIn" name="LinkedIn" value="@Model.DisplayUser.LinkedIn" readonly />
+        </div>
+        <div>
+            <button type="button" id="editButton" onclick="enableEditing()">Düzenle</button>
+            <button type="submit" id="saveButton" disabled>Kaydet</button>
+        </div>
+    </form>
 }
 else
 {
     <p>Kullanıcı bilgileri bulunamadı.</p>
+}
+
+@section Scripts {
+    <script>
+        function enableEditing() {
+            document.getElementById('Name').removeAttribute('readonly');
+            document.getElementById('Surname').removeAttribute('readonly');
+            document.getElementById('Email').removeAttribute('readonly');
+            document.getElementById('Github').removeAttribute('Github');
+            document.getElementById('LinkedInl').removeAttribute('LinkedIn');
+            document.getElementById('saveButton').removeAttribute('disabled');
+        }
+    </script>
 }

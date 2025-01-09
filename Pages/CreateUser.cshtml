@@ -1,0 +1,15 @@
+@page
+@model e_portfolio.Pages.CreateUserModel
+
+<h1>Create User</h1>
+<form method="post">
+    <div>
+        <label for="Name">First Name</label>
+        <input type="text" id="Name" name="Name" asp-for="Name" />
+    </div>
+    <div>
+        <label for="Surname">Last Name</label>
+        <input type="text" id="Surname" name="Surname" asp-for="Surname" />
+    </div>
+    <button type="submit">Create User</button>
+</form>
