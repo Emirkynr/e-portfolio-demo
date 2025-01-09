@@ -1,12 +1,16 @@
 @page
-@model LoginModel
+@model e_portfolio.Pages.LoginModel
 
 <h1>Login</h1>
 <form method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required />
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required />
+    <div>
+        <label for="Username">Username</label>
+        <input type="text" id="Username" name="Username" asp-for="Username" />
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" id="Password" name="Password" asp-for="Password" />
+    </div>
     <button type="submit">Login</button>
 </form>
 

@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using e_portfolio.Helpers;
-using e_portfolio.Models;   
+using e_portfolio.Models;
 
 namespace e_portfolio.Pages;
 
-public class IndexModel : PageModel
+public class IndexModel : BasePageModel
 {
     private readonly ILogger<IndexModel> _logger;
-    public User? DisplayUser { get; private set; }
 
     public IndexModel(ILogger<IndexModel> logger)
     {
@@ -21,12 +20,11 @@ public class IndexModel : PageModel
 
         if (userId != null)
         {
-            var xmlHelper = new XmlHelper();
-            DisplayUser = xmlHelper.GetUserById(userId.Value); // ID'ye göre kullanıcı bilgilerini al
+            var XmlHelper = new XmlHelper();
+            DisplayUser = XmlHelper.GetUserById(userId.Value); // DisplayUser BasePageModel'den miras alınıyor
         }
         else
         {
-            // Kullanıcı giriş yapmadıysa, login sayfasına yönlendirin
             Response.Redirect("/Login");
         }
     }

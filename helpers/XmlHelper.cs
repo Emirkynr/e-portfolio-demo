@@ -1,31 +1,16 @@
-// Helpers/XmlHelper.cs
 using System.Xml.Linq;
 using e_portfolio.Models;
-using System.Linq;
 using System.Xml;
-
 
 namespace e_portfolio.Helpers
 {
     public class XmlHelper
     {
-        public class User
-        {
-            public int Id { get; set; }
-            public string? Name { get; set; }
-            public string? Surname { get; set; }
-            public string? Email { get; set; }
-            public string? Username { get; set; }
-            public string? Password { get; set; }
-        }
-
         public User? GetUserByUsernameAndPassword(string username, string password)
         {
-            // XML dosyasını yükleyin
             var xmlDoc = new XmlDocument();
             xmlDoc.Load("users.xml");
 
-            // Tüm kullanıcı düğümlerini alın
             var userNodes = xmlDoc.SelectNodes("/Users/User");
 
             if (userNodes != null)
@@ -39,7 +24,6 @@ namespace e_portfolio.Helpers
                         usernameNode.InnerText == username &&
                         passwordNode.InnerText == password)
                     {
-                        // Kullanıcı bulundu, User nesnesini oluşturup döndürün
                         return new User
                         {
                             Id = int.Parse(userNode.Attributes?["Id"]?.Value ?? "0"),
@@ -53,7 +37,6 @@ namespace e_portfolio.Helpers
                 }
             }
 
-            // Kullanıcı bulunamadıysa null döndür
             return null;
         }
 
@@ -79,7 +62,5 @@ namespace e_portfolio.Helpers
 
             return null;
         }
-
-
     }
 }

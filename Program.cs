@@ -1,8 +1,12 @@
+using e_portfolio.Helpers;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddSession(); // Session middleware'i ekle
 builder.Services.AddRazorPages();
+
+// XmlHelper servisini ekle
+builder.Services.AddScoped<XmlHelper>(); // veya AddTransient<XmlHelper>();
 
 var app = builder.Build();
 
