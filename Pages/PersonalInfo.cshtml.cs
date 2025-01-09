@@ -22,10 +22,16 @@ namespace e_portfolio.Pages
 
         [BindProperty]
         public string? Email { get; set; }
+        [BindProperty]
         public string? GitHub { get; set; }
 
         [BindProperty]
         public string? LinkedIn { get; set; }
+        [BindProperty]
+        public string? TelNo { get; set; }
+
+        [BindProperty]
+        public string? Password { get; set; }
 
 
         public void OnGet()
@@ -37,6 +43,8 @@ namespace e_portfolio.Pages
                 Surname = DisplayUser.Surname;
                 GitHub = DisplayUser.GitHub;
                 LinkedIn = DisplayUser.LinkedIn;
+                TelNo = DisplayUser.TelNo;
+                Password = DisplayUser.Password;
                 Email = DisplayUser.Email;
             }
         }
@@ -49,6 +57,8 @@ namespace e_portfolio.Pages
                 DisplayUser.Surname = Surname;
                 DisplayUser.GitHub = GitHub;
                 DisplayUser.LinkedIn = LinkedIn;
+                DisplayUser.TelNo = TelNo;
+                DisplayUser.Password = Password;
                 DisplayUser.Email = Email;
 
                 _xmlHelper.UpdateUser(DisplayUser);

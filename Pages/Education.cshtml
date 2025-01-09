@@ -1,9 +1,48 @@
 @page
+@model e_portfolio.Pages.EducationModel
 @{
-    ViewData["Title"] = "Eğitim";
+    ViewData["Title"] = "Eğitim Bilgileri";
 }
 
-<h2>Eğitim</h2>
-<p>Üniversite: Dokuz Eylül Üniversitesi</p>
-<p>Bölüm: Bilgisayar Programcılığı</p>
-<p>Mezuniyet Yılı: 2025</p>
+<h2>Eğitim Bilgileri</h2>
+@if (Model.DisplayUser != null)
+{
+    <form method="post">
+        <div>
+            <label for="okulAdi">Okul Adı:</label>
+            <input type="text" id="okulAdi" name="okulAdi" value="@Model.okulAdi" readonly />
+        </div>
+        <div>
+            <label for="bolumAdi">Bölüm Adı:</label>
+            <input type="text" id="bolumAdi" name="bolumAdi" value="@Model.bolumAdi" readonly />
+        </div>
+        <div>
+            <label for="egitimDüzeyi">Eğitim Düzeyi:</label>
+            <input type="text" id="egitimDüzeyi" name="egitimDüzeyi" value="@Model.egitimDüzeyi" readonly />
+        </div>
+        <div>
+            <label for="egitimYillari">Eğitim Yılları:</label>
+            <input type="text" id="egitimYillari" name="egitimYillari" value="@Model.egitimYillari" readonly />
+        </div>
+        <div>
+            <button type="button" id="editButton" onclick="enableEditing()">Düzenle</button>
+            <button type="submit" id="saveButton" disabled>Kaydet</button>
+        </div>
+    </form>
+}
+else
+{
+    <p>Kullanıcı bilgileri bulunamadı.</p>
+}
+
+@section Scripts {
+    <script>
+        function enableEditing() {
+            document.getElementById('okulAdi').removeAttribute('readonly');
+            document.getElementById('bolumAdi').removeAttribute('readonly');
+            document.getElementById('egitimDüzeyi').removeAttribute('readonly');
+            document.getElementById('egitimYillari').removeAttribute('readonly');
+            document.getElementById('saveButton').removeAttribute('disabled');
+        }
+    </script>
+}

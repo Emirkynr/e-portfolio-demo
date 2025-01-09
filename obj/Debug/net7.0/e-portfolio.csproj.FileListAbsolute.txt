@@ -28,6 +28,13 @@
 /home/emir/projects/e-portfolio/obj/Debug/net7.0/e-portfolio.pdb
 /home/emir/projects/e-portfolio/obj/Debug/net7.0/e-portfolio.genruntimeconfig.cache
 /home/emir/projects/e-portfolio/obj/Debug/net7.0/ref/e-portfolio.dll
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.GeneratedMSBuildEditorConfig.editorconfig
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.AssemblyInfoInputs.cache
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.AssemblyInfo.cs
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.csproj.CoreCompileInputs.cache
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.MvcApplicationPartsAssemblyInfo.cache
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.RazorAssemblyInfo.cache
+/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.RazorAssemblyInfo.cs
 /home/emir/projects/e-portfolio-demo/bin/Debug/net7.0/appsettings.Development.json
 /home/emir/projects/e-portfolio-demo/bin/Debug/net7.0/appsettings.json
 /home/emir/projects/e-portfolio-demo/bin/Debug/net7.0/e-portfolio.staticwebassets.runtime.json
@@ -36,13 +43,6 @@
 /home/emir/projects/e-portfolio-demo/bin/Debug/net7.0/e-portfolio.runtimeconfig.json
 /home/emir/projects/e-portfolio-demo/bin/Debug/net7.0/e-portfolio.dll
 /home/emir/projects/e-portfolio-demo/bin/Debug/net7.0/e-portfolio.pdb
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.GeneratedMSBuildEditorConfig.editorconfig
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.AssemblyInfoInputs.cache
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.AssemblyInfo.cs
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.csproj.CoreCompileInputs.cache
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.MvcApplicationPartsAssemblyInfo.cache
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.RazorAssemblyInfo.cache
-/home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/e-portfolio.RazorAssemblyInfo.cs
 /home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/staticwebassets/msbuild.e-portfolio.Microsoft.AspNetCore.StaticWebAssets.props
 /home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/staticwebassets/msbuild.build.e-portfolio.props
 /home/emir/projects/e-portfolio-demo/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.e-portfolio.props

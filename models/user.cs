@@ -10,5 +10,11 @@ namespace e_portfolio.Models
         public string? Email { get; set; }
         public string? Username { get; set; }
         public string? Password { get; set; }
+        public string? TelNo { get; set; }
+        public string? okulAdi { get; set; }
+        public string? bolumAdi { get; set; }
+        public string? egitimDüzeyi { get; set; }
+        public string? egitimYillari { get; set; }
+        
     }
 }

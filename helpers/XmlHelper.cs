@@ -31,7 +31,14 @@ namespace e_portfolio.Helpers
                             Surname = userNode.SelectSingleNode("kisiselBilgiler/LastName")?.InnerText,
                             Email = userNode.SelectSingleNode("kisiselBilgiler/Email")?.InnerText,
                             Username = usernameNode.InnerText,
-                            Password = passwordNode.InnerText
+                            Password = passwordNode.InnerText,
+                            GitHub = userNode.SelectSingleNode("kisiselBilgiler/GitHub")?.InnerText,
+                            LinkedIn = userNode.SelectSingleNode("kisiselBilgiler/LinkedIn")?.InnerText,
+                            TelNo = userNode.SelectSingleNode("kisiselBilgiler/TelNo")?.InnerText,
+                            okulAdi = userNode.SelectSingleNode("egitim/okulAdi")?.InnerText,
+                            bolumAdi = userNode.SelectSingleNode("egitim/bolumAdi")?.InnerText,
+                            egitimDüzeyi = userNode.SelectSingleNode("egitim/egitimDüzeyi")?.InnerText,
+                            egitimYillari = userNode.SelectSingleNode("egitim/egitimYillari")?.InnerText
                         };
                     }
                 }
@@ -56,7 +63,14 @@ namespace e_portfolio.Helpers
                     Surname = userNode.SelectSingleNode("kisiselBilgiler/LastName")?.InnerText,
                     Email = userNode.SelectSingleNode("kisiselBilgiler/Email")?.InnerText,
                     Username = userNode.SelectSingleNode("kisiselBilgiler/Username")?.InnerText,
-                    Password = userNode.SelectSingleNode("kisiselBilgiler/Password")?.InnerText
+                    GitHub = userNode.SelectSingleNode("kisiselBilgiler/GitHub")?.InnerText,
+                    LinkedIn = userNode.SelectSingleNode("kisiselBilgiler/LinkedIn")?.InnerText,
+                    TelNo = userNode.SelectSingleNode("kisiselBilgiler/TelNo")?.InnerText,
+                    Password = userNode.SelectSingleNode("kisiselBilgiler/Password")?.InnerText,
+                    okulAdi = userNode.SelectSingleNode("egitim/okulAdi")?.InnerText,
+                    bolumAdi = userNode.SelectSingleNode("egitim/bolumAdi")?.InnerText,
+                    egitimDüzeyi = userNode.SelectSingleNode("egitim/egitimDüzeyi")?.InnerText,
+                    egitimYillari = userNode.SelectSingleNode("egitim/egitimYillari")?.InnerText
                 };
             }
 
@@ -72,13 +86,27 @@ namespace e_portfolio.Helpers
 
             if (userNode != null)
             {
-                userNode.SelectSingleNode("kisiselBilgiler/FirstName")!.InnerText = user.Name;
-                userNode.SelectSingleNode("kisiselBilgiler/LastName")!.InnerText = user.Surname;
-                userNode.SelectSingleNode("kisiselBilgiler/GitHub")!.InnerText = user.GitHub;
-                userNode.SelectSingleNode("kisiselBilgiler/LinkedIn")!.InnerText = user.LinkedIn;
-                userNode.SelectSingleNode("kisiselBilgiler/Email")!.InnerText = user.Email;
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/FirstName"), user.Name);
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/LastName"), user.Surname);
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/GitHub"), user.GitHub);
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/LinkedIn"), user.LinkedIn);
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/TelNo"), user.TelNo);
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/Password"), user.Password);
+                UpdateNode(userNode.SelectSingleNode("kisiselBilgiler/Email"), user.Email);
+                UpdateNode(userNode.SelectSingleNode("egitim/okulAdi"), user.okulAdi);
+                UpdateNode(userNode.SelectSingleNode("egitim/bolumAdi"), user.bolumAdi);
+                UpdateNode(userNode.SelectSingleNode("egitim/egitimDüzeyi"), user.egitimDüzeyi);
+                UpdateNode(userNode.SelectSingleNode("egitim/egitimYillari"), user.egitimYillari);
 
                 xmlDoc.Save("users.xml");
+            }
+        }
+
+        private void UpdateNode(XmlNode? node, string? value)
+        {
+            if (node != null && value != null)
+            {
+                node.InnerText = value;
             }
         }
 
@@ -95,17 +123,18 @@ namespace e_portfolio.Helpers
             var kisiselBilgiler = xmlDoc.CreateElement("kisiselBilgiler");
             kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "FirstName", user.Name));
             kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "LastName", user.Surname));
-            kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "Email", ""));
+            kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "Email", user.Email));
             kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "Username", user.Username));
             kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "Password", user.Password));
+            kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "TelNo", user.TelNo));
             kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "GitHub", user.GitHub));
             kisiselBilgiler.AppendChild(CreateElement(xmlDoc, "LinkedIn", user.LinkedIn));
 
-
             var egitim = xmlDoc.CreateElement("egitim");
-            egitim.AppendChild(CreateElement(xmlDoc, "School", ""));
-            egitim.AppendChild(CreateElement(xmlDoc, "Degree", ""));
-            egitim.AppendChild(CreateElement(xmlDoc, "Field", ""));
+            egitim.AppendChild(CreateElement(xmlDoc, "okulAdi", user.okulAdi));
+            egitim.AppendChild(CreateElement(xmlDoc, "bolumAdi", user.bolumAdi));
+            egitim.AppendChild(CreateElement(xmlDoc, "egitimDüzeyi", user.egitimDüzeyi));
+            egitim.AppendChild(CreateElement(xmlDoc, "egitimYillari", user.egitimYillari));
 
             var isDeneyimleri = xmlDoc.CreateElement("isDeneyimleri");
             isDeneyimleri.AppendChild(CreateElement(xmlDoc, "Company", ""));
@@ -130,10 +159,10 @@ namespace e_portfolio.Helpers
             xmlDoc.Save("users.xml");
         }
 
-        private XmlElement CreateElement(XmlDocument doc, string name, string innerText)
+        private XmlElement CreateElement(XmlDocument doc, string name, string? innerText)
         {
             var element = doc.CreateElement(name);
-            element.InnerText = innerText;
+            element.InnerText = innerText ?? string.Empty;
             return element;
         }
     }

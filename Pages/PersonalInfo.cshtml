@@ -29,6 +29,14 @@
             <input type="text" id="LinkedIn" name="LinkedIn" value="@Model.DisplayUser.LinkedIn" readonly />
         </div>
         <div>
+            <label for="TelNo">Telefon No:</label>
+            <input type="text" id="TelNo" name="TelNo" value="@Model.DisplayUser.TelNo" readonly />
+        </div>
+        <div>
+            <label for="Password">Sifre:</label>
+            <input type="text" id="Password" name="Password" value="@Model.DisplayUser.Password" readonly />
+        </div>
+        <div>
             <button type="button" id="editButton" onclick="enableEditing()">Düzenle</button>
             <button type="submit" id="saveButton" disabled>Kaydet</button>
         </div>
@@ -45,8 +53,10 @@ else
             document.getElementById('Name').removeAttribute('readonly');
             document.getElementById('Surname').removeAttribute('readonly');
             document.getElementById('Email').removeAttribute('readonly');
-            document.getElementById('Github').removeAttribute('Github');
-            document.getElementById('LinkedInl').removeAttribute('LinkedIn');
+            document.getElementById('GitHub').removeAttribute('readonly');
+            document.getElementById('LinkedIn').removeAttribute('readonly');
+            document.getElementById('TelNo').removeAttribute('readonly');
+            document.getElementById('Password').removeAttribute('readonly');
             document.getElementById('saveButton').removeAttribute('disabled');
         }
     </script>
