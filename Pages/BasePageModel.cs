@@ -3,21 +3,22 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using e_portfolio.Models;
 using e_portfolio.Helpers;
 
-namespace e_portfolio.Pages;
-
-public class BasePageModel : PageModel
+namespace e_portfolio.Pages
 {
-    public User? DisplayUser { get; set; }
-
-    public override void OnPageHandlerExecuting(PageHandlerExecutingContext context)
+    public class BasePageModel : PageModel
     {
-        base.OnPageHandlerExecuting(context);
-        var userId = HttpContext.Session.GetInt32("UserId");
+        public User? DisplayUser { get; set; }
 
-        if (userId != null)
+        public override void OnPageHandlerExecuting(PageHandlerExecutingContext context)
         {
-            var XmlHelper = new XmlHelper();
-            DisplayUser = XmlHelper.GetUserById(userId.Value);
+            base.OnPageHandlerExecuting(context);
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (userId != null)
+            {
+                var xmlHelper = new XmlHelper();
+                DisplayUser = xmlHelper.GetUserById(userId.Value);
+            }
         }
     }
 }

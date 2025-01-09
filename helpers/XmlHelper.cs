@@ -26,9 +26,9 @@ namespace e_portfolio.Helpers
                     {
                         return new User
                         {
-                            Id = int.Parse(userNode.Attributes?["Id"]?.Value ?? "0"),
-                            Name = userNode.SelectSingleNode("Name")?.InnerText,
-                            Surname = userNode.SelectSingleNode("Surname")?.InnerText,
+                            Id = int.Parse(userNode.Attributes["ID"].Value),
+                            Name = userNode.SelectSingleNode("FirstName")?.InnerText,
+                            Surname = userNode.SelectSingleNode("LastName")?.InnerText,
                             Email = userNode.SelectSingleNode("Email")?.InnerText,
                             Username = usernameNode.InnerText,
                             Password = passwordNode.InnerText
@@ -45,15 +45,15 @@ namespace e_portfolio.Helpers
             var xmlDoc = new XmlDocument();
             xmlDoc.Load("users.xml");
 
-            var userNode = xmlDoc.SelectSingleNode($"/Users/User[@Id='{id}']");
+            var userNode = xmlDoc.SelectSingleNode($"/Users/User[@ID='{id}']");
 
             if (userNode != null)
             {
                 return new User
                 {
                     Id = id,
-                    Name = userNode.SelectSingleNode("Name")?.InnerText,
-                    Surname = userNode.SelectSingleNode("Surname")?.InnerText,
+                    Name = userNode.SelectSingleNode("FirstName")?.InnerText,
+                    Surname = userNode.SelectSingleNode("LastName")?.InnerText,
                     Email = userNode.SelectSingleNode("Email")?.InnerText,
                     Username = userNode.SelectSingleNode("Username")?.InnerText,
                     Password = userNode.SelectSingleNode("Password")?.InnerText

@@ -3,29 +3,36 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using e_portfolio.Helpers;
 using e_portfolio.Models;
 
-namespace e_portfolio.Pages;
-
-public class IndexModel : BasePageModel
+namespace e_portfolio.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : BasePageModel
     {
-        _logger = logger;
-    }
+        private readonly ILogger<IndexModel> _logger;
 
-    public void OnGet()
-    {
-        var userId = HttpContext.Session.GetInt32("UserId");
-
-        if (userId != null)
+        public IndexModel(ILogger<IndexModel> logger)
         {
-            var XmlHelper = new XmlHelper();
-            DisplayUser = XmlHelper.GetUserById(userId.Value); // DisplayUser BasePageModel'den miras alınıyor
+            _logger = logger;
         }
-        else
+
+        public void OnGet()
         {
-            Response.Redirect("/Login");
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (userId != null)
+            {
+                var xmlHelper = new XmlHelper();
+                DisplayUser = xmlHelper.GetUserById(userId.Value);
+            }
+            else
+            {
+                Response.Redirect("/Login");
+            }
+        }
+
+        public IActionResult OnPostLogout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToPage("/Login");
         }
     }
 }

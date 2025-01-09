@@ -1,4 +1,3 @@
-// Models/User.cs
 namespace e_portfolio.Models
 {
     public class User

@@ -20,6 +20,9 @@
 @if (Model.DisplayUser != null)
 {
     <p><strong>Name:</strong> @Model.DisplayUser.Name @Model.DisplayUser.Surname</p>
+    <form method="post" asp-page-handler="Logout">
+        <button type="submit">Logout</button>
+    </form>
 }
 else
 {

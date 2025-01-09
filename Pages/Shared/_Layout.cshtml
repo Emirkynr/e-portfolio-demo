@@ -27,20 +27,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Account">E-portfolyo</a>
                         </li>
-                        
-                        @if (Model is BasePageModel baseModel && baseModel.DisplayUser != null)
-                        {
-                            <div class="header-user">
-                                <span>Welcome, @baseModel.DisplayUser.Name!</span>
-                                <form method="post" asp-page="/Logout" class="logout-form">
-                                    <button type="submit" class="btn btn-danger">Çıkış Yap</button>
-                                </form>
-                            </div>
-                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
+                    @if (Model.DisplayUser != null)
+                    {
+                        <div class="header-user">
+                            <span>Welcome, @Model.DisplayUser.Name!</span>
+                            <form method="post" asp-page-handler="Logout" class="logout-form">
+                                <button type="submit" class="btn btn-danger">Logout</button>
+                            </form>
+                        </div>
+                    }
+                    else
+                    {
+                        <span>No user logged in.</span>
+                    }
                 </div>
             </div>
         </nav>
