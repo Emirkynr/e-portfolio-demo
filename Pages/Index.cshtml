@@ -19,9 +19,11 @@
 </ul>
 @if (Model.DisplayUser != null)
 {
-    <p><strong>Name:</strong> @Model.DisplayUser.FirstName @Model.DisplayUser.LastName</p>
+    <p><strong>Name:</strong> @Model.DisplayUser.Name @Model.DisplayUser.Surname</p>
 }
 else
 {
     <p>Giris yapilmadi. Lutfen Giris yapiniz.</p>
 }
+<h1>Welcome, @Model.DisplayUser?.Name</h1>
+<p>Your email: @Model.DisplayUser?.Email</p>

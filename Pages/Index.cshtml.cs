@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using e_portfolio.Helpers;
-using e_portfolio.Models;
+using e_portfolio.Models;   
 
 namespace e_portfolio.Pages;
 
@@ -17,7 +17,17 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-        var xmlHelper = new XmlHelper();
-        DisplayUser = xmlHelper.GetUserById(1); // ID'si 1 olan kullanıcıyı al
+        var userId = HttpContext.Session.GetInt32("UserId");
+
+        if (userId != null)
+        {
+            var xmlHelper = new XmlHelper();
+            DisplayUser = xmlHelper.GetUserById(userId.Value); // ID'ye göre kullanıcı bilgilerini al
+        }
+        else
+        {
+            // Kullanıcı giriş yapmadıysa, login sayfasına yönlendirin
+            Response.Redirect("/Login");
+        }
     }
 }
